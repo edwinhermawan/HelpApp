@@ -1,10 +1,12 @@
+<div class="bigBox">
 <input type="text" ng-model="inputName" placeholder="Name" />
-<button ng-click="addName(inputName)">Help me Lorin!!</button>
+<button class="helpButton" ng-click="addName(inputName)">Help me Lorin!!</button>
 <h1>Queue</h1>
 <ul>
 	<li ng-repeat="name in names">
+		<div class="x" ng-bind="name"></div>
 		<button ng-click="deleteName($index)">x</button>
-		<div ng-bind="name"></div>
 	</li>
 </ul>
-<button ng-click="clearAll()">Clear All</button>
+<button class="clearButton" ng-click="clearAll()">Clear All</button>
+</div>
