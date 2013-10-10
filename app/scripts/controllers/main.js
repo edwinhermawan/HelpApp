@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('helpAppApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, angularFire) {
   	$scope.names = [];
+    var ref = new Firebase("https://lorin911.firebaseio.com/names");
+    angularFire(ref, $scope, "names");
 
   	$scope.addName = function(name) {
   		$scope.names.push(name)

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('helpAppApp', [])
+angular.module('helpAppApp', ["firebase"])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
